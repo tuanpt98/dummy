@@ -2,7 +2,9 @@
 
 ## I. Git-Github-Gitlap
 
+
 ### 1. Git
+<img src="http://blog.davidecoppola.com/wp-content/uploads/2016/11/git_logo-header.png">
 Git là một trong những Hệ thống Quản lý Phiên bản Phân tán, vốn được phát triển nhằm quản lý mã nguồn (source code) của Linux.
 
 Trên Git, ta có thể lưu trạng thái của file dưới dạng lịch sử cập nhật. Vì thế, có thể đưa file đã chỉnh sửa về trạng thái cũ hay có thể biết được file đã được chỉnh sửa chỗ nào do ai đã chỉnh sửa.
@@ -13,6 +15,7 @@ Git sử dụng mô hình phân tán, mỗi thành viên trong team sẽ có m�
 
 Trong mô hình Git sẽ luôn có một server lưu trữ chính để cả team cùng kết nối thông qua đó (Có thể là Github, bitbucket, ...). Ngoài ra mỗi người trong team đều có thể kết nối đến máy tính của nhau thông qua SSH.
 ### 2. Github-Gitlap
+<img src="https://cdn-images-1.medium.com/max/1600/1*OLsrVuctE2DO924KoSkNLA.png">
 GitHub là một dịch vụ cung cấp kho lưu trữ mã nguồn Git dựa trên nền web cho các dự án phát triển phần mềm. GitHub cung cấp cả phiên bản trả tiền lẫn miễn phí cho các tài khoản. 
 
 GitLab là một phần mềm có nhiệm vụ quản lý kho code Git. Gitlab sở hữu các tính năng đơn giản, góp phần to lớn trong việc giúp các doanh nghiệp, cá nhân, tổ chức lưu trữ code một cách nhanh chóng vô cùng, người dùng hoàn toàn có thể truy cập mọi lúc mọi nơi miễn là có kết nối Internet.
@@ -20,6 +23,7 @@ GitLab là một phần mềm có nhiệm vụ quản lý kho code Git. Git
 Gitlab cũng có khá nhiều điểm tương đồng với GitHub nhưng GitHub đi theo hướng kinh doanh nhiều hơn, bởi vì nếu bạn sở hữu kho code riêng và muốn ẩn chúng khỏi cộng đồng hoặc mở rộng hơn nữa thì bạn sẽ phải trả phí cho dịch vụ này. Gitlab hoàn toàn ngược lại, bạn có thể ẩn kho code của mình, không công khai chúng cho bất kỳ ai, trong trường hợp vượt quá ngưỡng miễn phí thì bạn mới phải mất phí để mua thêm dịch vụ.
 
 ## II. các khái niệm liên quan và thực hành với Git
+
 ### 1. Repository (repo)
 
 Repository hay được gọi tắt là Repo, đơn giản là nơi chứa tất cả những thông tin cần thiết để quản lý các sửa đổi và lịch sử của toàn bộ project. Tất cả dữ liệu của Repo đều được chứa trong thư mục bạn đang làm việc dưới dạng folder ẩn có tên là .git
@@ -55,31 +59,33 @@ Khi thực hiện commit, trong repository sẽ tạo ra commit (hoặc revision
 Commit này đang được chứa tại repository, các commit nối tiếp với nhau theo thứ tự thời gian. Bằng việc lần theo commit thì có thể biết được lịch sử thay đổi trong quá khứ.
 ### 5. Conflict 
 <img src="https://github.com/hocchudong/ghichep-Git/blob/master/images/git-term-4.png">
+
 ` Conflic ` là trường hợp có 2 sự thay đổi trong một dòng code và máy tính không thể tự quyết định dòng code nào là “đúng”.
 Để giải quyết mâu thuẫn bạn phải dùng “tay không” để sữa các xung đột này. Bạn chỉ việc nhìn vào file bị conflict và tự quyết định dòng code nào giữ lại, dòng nào xóa bỏ.
-###6. Thao tác với git 
+### 6. Thao tác với git 
 > Thao tác trên macOS
 #### Mô hình làm việc của Git
 <img src="https://trello-attachments.s3.amazonaws.com/5bfb91aab58a9002b322f5e7/5cde24cbd3bec82328d65b18/7ec5305a3695462484544ce3a1fae804/image.png">
 - Clone
-Clone là thao tác tải mã nguồn từ một remote server về máy tính,chỉ tải về máy local repository nhánh master
+là thao tác tải mã nguồn từ một remote server về máy tính,chỉ tải về máy local repository nhánh master.
 > git clone [ link github]
 ex: git clone https://github.com/dhvsplg99999/dummy.git
 #### Sơ đồ Commit
 <img src="https://github.com/nghuuquyen/sociss-class-nodejs/blob/master/src/git-tutorials/images/git-staging-area.png">
+
 - Add
-add là thao tác đẩy một tệp tin từ working directory vào staging area để chuẩn bị cho việc commit.
+là thao tác đẩy một tệp tin từ working directory vào staging area để chuẩn bị cho việc commit.
 > git add [tên file]
 ex : muốn add file README.md t dùng lệnh ` git add README.md `
 Ngoài ra khi muốn add các file đã thực hiện ta dùng lệnh ` git add . `
-
 - Staging area
-staging area là nơi để chuẩn bị cho việc commit vào repository.
+là nơi để chuẩn bị cho việc commit vào repository.
 - Commit
 > git commit -m "nội dung commit"
 - Push 
-push là thao tác đẩy mã nguồn hiện tại đã được commit của bạn lên remote server.> git push origin [tên nhánh]
+là thao tác đẩy mã nguồn hiện tại đã được commit của bạn lên remote server.
+> git push origin [tên nhánh]
 - Pull 
-pull là thao tác lấy mã nguồn từ một hoặc nhiều nhánh cụ thể nào đó ở remote server nào đó về local repository trên máy tính của bạn
->git pull origin [tên nhánh]
+là thao tác lấy mã nguồn từ một hoặc nhiều nhánh cụ thể nào đó ở remote server nào đó về local repository trên máy tính của bạn
+> git pull origin [tên nhánh]
 
