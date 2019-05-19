@@ -93,3 +93,4 @@ là thao tác đẩy mã nguồn hiện tại đã được commit của bạn l
 là thao tác lấy mã nguồn từ một hoặc nhiều nhánh cụ thể nào đó ở remote server nào đó về local repository trên máy tính của bạn
 > git pull origin [tên nhánh]
 
+[Note](https://github.com/dhvsplg99999/dummy/blob/master/note.md)
