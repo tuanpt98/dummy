@@ -66,10 +66,14 @@ Commit này đang được chứa tại repository, các commit nối tiếp v�
 > Thao tác trên macOS
 #### Mô hình làm việc của Git
 <img src="https://trello-attachments.s3.amazonaws.com/5bfb91aab58a9002b322f5e7/5cde24cbd3bec82328d65b18/7ec5305a3695462484544ce3a1fae804/image.png">
+
 - Clone
 là thao tác tải mã nguồn từ một remote server về máy tính,chỉ tải về máy local repository nhánh master.
+
 > git clone [ link github]
+
 ex: git clone https://github.com/dhvsplg99999/dummy.git
+
 #### Sơ đồ Commit
 <img src="https://github.com/nghuuquyen/sociss-class-nodejs/blob/master/src/git-tutorials/images/git-staging-area.png">
 
