@@ -2,14 +2,47 @@
 
 ## I. Git-Github-Gitlap
 
-	### 1. Git
-	'Git là một trong những Hệ thống Quản lý Phiên bản Phân tán, vốn được phát triển nhằm quản lý mã nguồn (source code) của Linux.
+### 1. Git
+Git là một trong những Hệ thống Quản lý Phiên bản Phân tán, vốn được phát triển nhằm quản lý mã nguồn (source code) của Linux.
 
 Trên Git, ta có thể lưu trạng thái của file dưới dạng lịch sử cập nhật. Vì thế, có thể đưa file đã chỉnh sửa về trạng thái cũ hay có thể biết được file đã được chỉnh sửa chỗ nào do ai đã chỉnh sửa.
 
-Thêm nữa, khi định ghi đè (overwrite) lên file mới nhất đã chỉnh sửa của người khác bằng file đã chỉnh sửa dựa trên file cũ, thì khi upload lên server sẽ hiện ra cảnh cáo. Vì thế, sẽ không xảy ra lỗi khi ghi đè lên nội dung chỉnh sửa của người khác mà không hề hay biết.'
+Thêm nữa, khi định ghi đè (overwrite) lên file mới nhất đã chỉnh sửa của người khác bằng file đã chỉnh sửa dựa trên file cũ, thì khi upload lên server sẽ hiện ra cảnh cáo. Vì thế, sẽ không xảy ra lỗi khi ghi đè lên nội dung chỉnh sửa của người khác mà không hề hay biết.
 
-	### 2. Github-Gitlap
+Git sử dụng mô hình phân tán, mỗi thành viên trong team sẽ có một repository ở máy của riêng mình. Điều đó có nghĩa là nếu có 3 người A,B,C cùng làm việc trong một project. Thì bản thân repo trên máy của người A, người B, và người C có thể kết nối được với nhau.
+
+Trong mô hình Git sẽ luôn có một server lưu trữ chính để cả team cùng kết nối thông qua đó (Có thể là Github, bitbucket, ...). Ngoài ra mỗi người trong team đều có thể kết nối đến máy tính của nhau thông qua SSH.
+### 2. Github-Gitlap
+GitHub là một dịch vụ cung cấp kho lưu trữ mã nguồn Git dựa trên nền web cho các dự án phát triển phần mềm. GitHub cung cấp cả phiên bản trả tiền lẫn miễn phí cho các tài khoản. 
+
+GitLab là một phần mềm có nhiệm vụ quản lý kho code Git. Gitlab sở hữu các tính năng đơn giản, góp phần to lớn trong việc giúp các doanh nghiệp, cá nhân, tổ chức lưu trữ code một cách nhanh chóng vô cùng, người dùng hoàn toàn có thể truy cập mọi lúc mọi nơi miễn là có kết nối Internet.
+
+Gitlab cũng có khá nhiều điểm tương đồng với GitHub nhưng GitHub đi theo hướng kinh doanh nhiều hơn, bởi vì nếu bạn sở hữu kho code riêng và muốn ẩn chúng khỏi cộng đồng hoặc mở rộng hơn nữa thì bạn sẽ phải trả phí cho dịch vụ này. Gitlab hoàn toàn ngược lại, bạn có thể ẩn kho code của mình, không công khai chúng cho bất kỳ ai, trong trường hợp vượt quá ngưỡng miễn phí thì bạn mới phải mất phí để mua thêm dịch vụ.
 
 ## II. các khái niệm liên quan và thực hành với Git
+
+###1. Repository (repo)
+
+Repository hay được gọi tắt là Repo, đơn giản là nơi chứa tất cả những thông tin cần thiết để quản lý các sửa đổi và lịch sử của toàn bộ project. Tất cả dữ liệu của Repo đều được chứa trong thư mục bạn đang làm việc dưới dạng folder ẩn có tên là .git
+
+Nên bạn phải chú ý không được xóa thư mục này đi, nếu không sẽ mất thông tin quan trọng.
+
+Repository của Git được phân thành 2 loại là remote repository và local repository.
+
+Remote repository: Là repository dùng để chia sẽ giữa nhiều người và bố trí trên server chuyên dụng.
+
+Local repository: Là repository ở trên máy tính của chính bản thân mình, dành cho một người dùng sử dụng.
+
+Thường thì trong quá trình làm việc chúng ta sẽ làm việc trên local repo, tức là lưu trữ trên máy của mình. Khi muốn chia sẽ nó đến người dùng khác khi đã hoàn thành thì sẽ đẩy code (Push) lên Remote repo.
+
+###2. Nhánh (Branch)
+> Tính năng nổi bật của Git 
+<img src="https://github.com/nghuuquyen/sociss-class-nodejs/blob/master/src/git-tutorials/images/feature-branch.png">
+Nhánh có thể hiểu như là một không gian làm việc (workspace), Ví dụ khi bạn muốn tạo một tính năng A mới bạn sẽ tạo ra một nhánh mới để làm tính năng A. Đồng thời trong lúc bạn làm tính năng A thì bạn cũng có thể tạo ra một nhánh mới để sửa lỗi cho dự án của mình. Hai không gian làm việc này hoàn toàn không động đến nhau, nên dù tính năng A đã làm xong hay chưa đều không ảnh hưởng đến các nhánh (không gian làm việc) khác.
+
+Trong một project sẽ luôn có một nhánh chính (mặc định) gọi là master. Tính năng được tạo ra trong các nhánh phụ sẽ được hợp nhất lại vào master khi đã làm xong, hành động này gọi là merge
+
+###3. Merge
+
+Merge là hành động khi bạn muốn nhập mã nguồn từ một nhánh khác vào nhánh hiện tại.
 
