@@ -91,8 +91,9 @@ số ` 6 ` là quyền đối với nhóm user khác , 6 = 4 +2 như vậy quy�
 
 ## Packet Managerment
 
-`Packet Managerment là trình quản lý gói tập tin của hệ thống mà trong đó chứa những công cụ, phần mềm tự động hoá quátr trình cài đặt , cập nhật , định dạng caáu hình và xoá ứng dụng.
+`Packet Managerment ` là trình quản lý gói tập tin của hệ thống mà trong đó chứa những công cụ, phần mềm tự động hoá quátr trình cài đặt , cập nhật , định dạng caáu hình và xoá ứng dụng.
 Vì linux có nhiều contributors khác nhau nến gói quản lý trên các contributors cũng khác nhau 
+
 - Trình quản ký gói dựa trên Debian 
 <img src="https://st.quantrimang.com/photos/image/2019/05/20/trinh-quan-ly-goi-linux-pho-bien-nhat-2.jpg">
  - ` Gói dpkg ` Dpkg là một phần mềm quản lý gói cơ bản, với những công cụ để cài đặt, gỡ bỏ và xây dựng các gói.Tuy nhiên, dpkg lại thiếu những tính năng nâng cao như tải xuống các gói từ Internet hoặc cài đặt dependency tự động. Việc có thể làm tải xuống các gói từ Internet rất hữu ích, vì nó cho phép người dùng thêm kho lưu trữ cho các gói, giúp tăng đáng kể việc lựa chọn phần mềm có thể dễ dàng cài đặt trên hệ thống.
