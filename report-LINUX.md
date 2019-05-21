@@ -1,5 +1,5 @@
 # Linux report 
-## Basic Commands
+## 1. Basic Commands
 
 > which diff
 
@@ -29,7 +29,7 @@ Lệnh trả về đường dẫn của các binary file, source code, man page 
 
 ` ln ` là một lệnh link file hoặc thư mục đến một thư mục khác. Như ví dụ file1.txt là một file tồn tại có sẵn mà file2.txt sẽ là empty file được link đến file1.txt do đó dữ liệu trong hai file đều giống nhau.
 
-## working with files 
+## 2. working with files 
 
 > locate [file name ]
 
@@ -70,7 +70,7 @@ là lệnh đùng dể xem dữ liệu trên file. Ngoài ra có thể dùng có
 > vi [file name]
 
 lệnh đùng để sửa đổi file. Thao tác cơ bản là ` i ` là insert sau khi thay đổi ` esc ` và ` :x ` để thoát và lưu lại thay đổi hoặc ` :q! ` là thoát và không lưu bất kỳ thay đôir nào.
-## File permission 
+## 3. File permission 
 
 > chown [owner name] [file name ]
 
@@ -87,12 +87,12 @@ cá quyền được cài đặt theo các số `  4 là đọc ` ,` 2 là quy�
 ex: ` chmod 746 file.txt ` có 3 số là ` 7 ` , ` 4 `, ` 6 `.
 số ` 7 ` là thể hiện quyền của ngừơi sở hữu file, ở đây 7 là 4+2+1 là có đủ quyền đọc ghi và thực thi 
 số ` 4 ` là thể hiện quyền của nhóm sở hữu , 4 ở đây là nhóm sở hữu chỉ có thể đọc file 
-số ` 6 ` là quyền đối với nhóm user khác , 6 = 4 +2 như vậy quyền của các nhóm khác ở đay là đọc và ghi vào file.
+số ` 6 ` là quyền đối với nhóm user khác , 6 = 4 +2 như vậy quyền của các nhóm khác ở đây là đọc ghi vào file.
 
-## Packet Managerment
+## 4. Packet Managerment
 
-`Packet Managerment ` là trình quản lý gói tập tin của hệ thống mà trong đó chứa những công cụ, phần mềm tự động hoá quátr trình cài đặt , cập nhật , định dạng caáu hình và xoá ứng dụng.
-Vì linux có nhiều contributors khác nhau nến gói quản lý trên các contributors cũng khác nhau 
+`Packet Managerment ` là trình quản lý gói tập tin của hệ thống mà trong đó chứa những công cụ, phần mềm tự động hoá quá trình cài đặt , cập nhật , định dạng cấu hình và xoá ứng dụng.
+Vì linux có nhiều contributions khác nhau nến gói quản lý trên các contributions cũng khác nhau 
 
 ### Trình quản ký gói dựa trên Debian 
 
@@ -130,10 +130,10 @@ Vì linux có nhiều contributors khác nhau nến gói quản lý trên các c
 
  -` Gói Portage ` Portage là trình quản lý gói cho Gentoo, một hệ điều hành đơn giản, nhưng phải được biên dịch từ đầu khi cài đặt trên bất kỳ hệ thống nào. Đây là một trong những trình quản lý gói tiên tiến nhất hiện có, với các tính năng và cải tiến mới được bổ sung liên tục.
 
-## Systerm info
+## 5. Systerm info
 - Các dữ liệu hệ thống như name , version, release , dítributon... đều được hiển thị sau câu lệnh ` cat /etc/*release `
 - Thông tin về Kernel version được biết qua câu lệnh ` uname -r `
-- Các thông số về Memory được lưu trữ ở file meninfo nên có thể xem băng cách ` head /proc/neminfo/
+- Các thông số về Memory được lưu trữ ở file meninfo nên có thể xem băng cách ` head /proc/neminfo/ `
 - Thông tin về phân vùng ổ cứng đc biết qua câu lệnh ` df -h `
 - Thông tin hostname của hệ thống bằng câu lệnh ` hostnamectl status ` 
 
@@ -150,5 +150,7 @@ Proc là hệ thống file ảo bởi vì trên thực tế nó không tồn t�
 /proc/<process-id-#>
 /proc/sys
 ```
-## Networking 
-
+## 6. Networking 
+Ở CentOS routing và host được chứa tại đường dẫn ` /etc/sysconfig/network ` .
+---To be continuted---
+(Em đang đọc thêm về network em sẽ hoàn thành phần này sau ạ!)
