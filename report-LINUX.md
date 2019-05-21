@@ -94,7 +94,8 @@ số ` 6 ` là quyền đối với nhóm user khác , 6 = 4 +2 như vậy quy�
 `Packet Managerment ` là trình quản lý gói tập tin của hệ thống mà trong đó chứa những công cụ, phần mềm tự động hoá quátr trình cài đặt , cập nhật , định dạng caáu hình và xoá ứng dụng.
 Vì linux có nhiều contributors khác nhau nến gói quản lý trên các contributors cũng khác nhau 
 
-- Trình quản ký gói dựa trên Debian 
+### Trình quản ký gói dựa trên Debian 
+
 <img src="https://st.quantrimang.com/photos/image/2019/05/20/trinh-quan-ly-goi-linux-pho-bien-nhat-2.jpg">
 
  - ` Gói dpkg ` Dpkg là một phần mềm quản lý gói cơ bản, với những công cụ để cài đặt, gỡ bỏ và xây dựng các gói.Tuy nhiên, dpkg lại thiếu những tính năng nâng cao như tải xuống các gói từ Internet hoặc cài đặt dependency tự động. Việc có thể làm tải xuống các gói từ Internet rất hữu ích, vì nó cho phép người dùng thêm kho lưu trữ cho các gói, giúp tăng đáng kể việc lựa chọn phần mềm có thể dễ dàng cài đặt trên hệ thống.
@@ -105,7 +106,8 @@ Vì linux có nhiều contributors khác nhau nến gói quản lý trên các c
 
  - ` Gói Aptitude `Aptitude rất giống với APT và cung cấp hầu hết các chức năng tương tự như trình quản lý gói này. Nhưng, Aptitude còn cung cấp một vài tính năng bổ sung, chẳng hạn như nâng cấp an toàn, cho phép người dùng nâng cấp các gói mà không cần xóa những gói hiện có khỏi hệ thống. Tính năng giữ nguyên gói cũng có sẵn, điều này ngăn các gói nhất định được nâng cấp tự động.Cả hai trình quản lý gói này thực sự sử dụng dpkg cho các hoạt động cơ bản và chỉ sử dụng phần mềm của riêng chúng để tải xuống và quản lý gói.
 
-- Trình quản lý gói dựa trên RedHat Enterprise Linux
+### Trình quản lý gói dựa trên RedHat Enterprise Linux
+
 <img src="https://st.quantrimang.com/photos/image/2019/05/20/trinh-quan-ly-goi-linux-pho-bien-nhat-5.jpg">
 
  - ` Gói RPM ` RedHat và CentOS là một trong những hệ điều hành được sử dụng rộng rãi nhất và dễ dàng được tìm thấy trên các máy chủ hiện nay. Phần mềm quản lý gói cơ bản được tìm thấy trên các hệ thống này là RPM, viết tắt của Red Hat Package Manager. Trình quản lý gói này cũng thực hiện những hoạt động cơ bản như cài đặt và gỡ bỏ các gói, và giống như dpkg, RPM cũng không thể quản lý các gói hoặc cài đặt chúng trực tiếp từ Internet.
@@ -116,7 +118,8 @@ Vì linux có nhiều contributors khác nhau nến gói quản lý trên các c
 
  - ` Gói DNF ` DNF, viết tắt của Dandified Packaging Tool, là phiên bản hiện đại và tiên tiến hơn của trình quản lý YUM. DNF kết hợp các tính năng của YUM, đồng thời cải thiện hiệu suất và việc sử dụng tài nguyên. Hiện tại, mới chỉ có Fedora sử dụng phiên bản YUM thế hệ tiếp theo này, nhưng hy vọng, người dùng sẽ thấy nó xuất hiện trên nhiều hệ điều hành hơn trong tương lai.Có một số công cụ quản lý gói khác có sẵn cho những hệ thống dựa trên RPM, chẳng hạn như up2date, urpmi và ZYpp. Tuy nhiên, những trình quản lý gói này được sử dụng rộng rãi như YUM hoặc DNF.
 
-- Những trình quản lý gói khác 
+### Những trình quản lý gói khác 
+
 <img src="https://st.quantrimang.com/photos/image/2019/05/20/trinh-quan-ly-goi-linux-pho-bien-nhat-8.jpg">
 
  - ` Gói Pacman ` Pacman là trình quản lý gói được tìm thấy trên Arch Linux. Pacman là công cụ quản lý gói duy nhất được tìm thấy trên Arch, khiến nó không phải là một frontend. Arch Linux là một hệ điều hành phát hành dạng rolling release, với các bản cập nhật, được thêm vào mỗi ngày. Chỉ có một vài lệnh với Pacman, dùng để tìm kiếm, cài đặt và xóa gói. Trình quản lý gói này có thể kết nối với Internet và lấy các gói từ đó, khiến Pacman thân thiện hơn với người dùng. Tuy nhiên, Pacman được thiết kế để cài đặt phần mềm từ kho Arch, nên không thể cài đặt từ kho của bên thứ ba. 
@@ -128,3 +131,24 @@ Vì linux có nhiều contributors khác nhau nến gói quản lý trên các c
  -` Gói Portage ` Portage là trình quản lý gói cho Gentoo, một hệ điều hành đơn giản, nhưng phải được biên dịch từ đầu khi cài đặt trên bất kỳ hệ thống nào. Đây là một trong những trình quản lý gói tiên tiến nhất hiện có, với các tính năng và cải tiến mới được bổ sung liên tục.
 
 ## Systerm info
+- Các dữ liệu hệ thống như name , version, release , dítributon... đều được hiển thị sau câu lệnh ` cat /etc/*release `
+- Thông tin về Kernel version được biết qua câu lệnh ` uname -r `
+- Các thông số về Memory được lưu trữ ở file meninfo nên có thể xem băng cách ` head /proc/neminfo/
+- Thông tin về phân vùng ổ cứng đc biết qua câu lệnh ` df -h `
+- Thông tin hostname của hệ thống bằng câu lệnh ` hostnamectl status ` 
+
+### Proc Filesysterm
+
+Proc là hệ thống file ảo bởi vì trên thực tế nó không tồn tại trong bất kì phương tiện lưu trữ nào. Nó tồn tại dựa trên bộ nhớ ảo và dữ liệu luôn thay đổi động cùng với trạgn thái của hệ thống. Hầu hết các dữ liệu trong proc FS được cập nhật liên tục để phù hợp với trạng thái hiện tại của hệ điều hành. Nội dung của proc FS có thể được đọc bởi user có quyền thích hợp, trong đó một số phần chỉ dó thể đọc bởi owner của process và root. Nếu liệt kê thư mục root (/) ra bạn sẽ thấy. Một vài files quan trọng in trong ` /proc ` :
+```
+/proc/cpuinfo
+/proc/interrupts
+/proc/meminfo
+/proc/mounts
+/proc/partitions
+/proc/version
+/proc/<process-id-#>
+/proc/sys
+```
+## Networking 
+
