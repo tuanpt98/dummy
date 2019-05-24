@@ -35,3 +35,22 @@ Các thực thể của lớp Application cung cấp các ứng dụng cho phép
 Một số ứng dụng thường gặp của chồng giao thức TCP/IP: FTP (File Transfer Protocol), DNS
 
 
+# DHCP 
+` DHCP ` là giao thức cấp phát ip một cách tự động cùng với các cấu hình liên quan như subnet mask và gateưay và cung cấp database trung tâm để theo dõi tất cả máy tính trong hệ thống mạng tránh việc trùng lặp ip như cài đặt ip thủ công.
+
+
+# Subnet mask 
+` Subnet mask ` gíup chia nhỏ mạng thành các mạng con và kết nối với nhau qua router.
+
+# IP 
+` Internet protocol ` là giao hướng gói dữ liệu sử dụng bởi các máy chủ nguồn và đích để truyền dữ liệu liên mạng chuyển mạch gói 
+
+# DNS 
+` Domain Name System ` là hệ thống thiết lập tương ứng giữ địa chỉ ip và tên miền giúp người đọc dễ nhớ hơn là những chữ số IP .
+
+# TCP - UDP 
+
+| TCP | UDP |
+|-----|-----|
+| TCP có quá trình kiểm tra lỗi khi truyền tin nên độ tin cậy cao và không bị mất dữ liệu nhưng bị giới hạn thời gian chuyển gói tin vì khi bên chuyển nhận được xác nhận đã nhận gói tin thì mới tiếp tục chuyển tiếp | UDP không có quá trình kiểm tra lỗi khi truyền tin nên độ tin cậy là k có và không thể kiểm soát lỗi trong quá trình truyền tin nhưng bù lại được thời gian chuyển gói tin vì không cần xác nhận gói tin đã được nhận nên việc gửi gói tin theo UDP được gửi một cách liên tục |
+
