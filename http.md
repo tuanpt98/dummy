@@ -40,7 +40,7 @@ Một số ứng dụng thường gặp của chồng giao thức TCP/IP: FTP (F
 
 
 ## Mô hình làm việc của DHCP 
-< img src = " https://techvccloud.mediacdn.vn/2018/10/9/photo-1-1539053199157968494441.png" >
+<img src="https://techvccloud.mediacdn.vn/2018/10/9/photo-1-1539053199157968494441.png" >
 
 Khi 1 thiết bị được bật và kết nối tới một mạng có máy chủ DHCP, thiết bị sẽ gửi yêu cầu tới máy chủ, và yêu cầu đó được gọi là yêu cầu DHCPDISCOVER.
 
